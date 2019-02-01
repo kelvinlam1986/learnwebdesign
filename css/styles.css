@@ -1,3 +1,56 @@
+/* MAIN SECTION */
+
+main {
+    position: relative;
+    background-color: white;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+main.active {
+    left: -200px;
+}
+
+/* END MAIN SECTION */
+
+/* MOBILE NAVIGATION */
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    background-color: #1F1F1F;
+    width: 200px;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+.mobile-nav ul {
+    margin: 0;
+    padding: 25px;
+}
+
+.mobile-nav ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.mobile-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'built_titling', Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .mobile-nav {
+        display: block;
+    }
+}
+
+/* END MOBILE NAVIGATION */
 
 /* HEADER */
 
@@ -58,6 +111,13 @@ header .right-nav {
     margin: 0 auto;
 }
 
+/* Tablet Style */
+@media only screen and (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
 #hero .container  {
     display: flex;
     align-items: center;
@@ -82,6 +142,19 @@ header .right-nav {
     font-weight: normal;
     color: #FFFFFF;
     line-height: 1;
+}
+
+/* Large mobile Styles*/
+@media only screen and (max-width: 768px) {
+    .hero-text .hero-title {
+        font-size: 90px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .hero-text .hero-title {
+        font-size: 60px;
+    }
 }
 
 .btn-primary {
@@ -110,6 +183,13 @@ header .right-nav {
     font-size: 60px;
 }
 
+/* Small mobile Styles*/
+@media only screen and (max-width: 400px) {
+    #blog h2 {
+        font-size: 40px;
+    }
+}
+
 .blog-posts {
     display: flex;
     flex-direction: row;
@@ -122,6 +202,20 @@ header .right-nav {
     padding: 0 5px;
     box-sizing: border-box;
     margin-bottom: 30px;
+}
+
+/* Large mobile Styles*/
+@media only screen and (max-width: 768px) {
+    .blog-post {
+        width: 50%;
+    }
+}
+
+/* Small mobile Styles*/
+@media only screen and (max-width: 400px) {
+    .blog-post {
+        width: 100%;
+    }
 }
 
 .blog-post img {
@@ -176,12 +270,31 @@ header .right-nav {
     align-items: top;
 }
 
+@media only screen and (max-width: 400px) {
+    #about-us .container {
+        flex-direction: column;
+    }
+}
+
 .about-us-title {
     width: 50%;
 }
 
+@media only screen and (max-width: 400px) {
+    .about-us-title {
+        width: 100%;
+    }
+}
+
 .about-us-desc {
     width: 50%;
+}
+
+@media only screen and (max-width: 400px) {
+    .about-us-desc {
+        width: 100%;
+        margin-top: 50px;
+    }
 }
 
 .about-us-desc	h4	{
@@ -256,6 +369,20 @@ footer .container	{
     height:	120px;
 }
 
+/* Small Mobile Styles */
+@media only screen and (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        height: auto;
+    } 
+}
+
+@media only screen and (max-width: 768px) {
+    footer .container ul {
+        padding: 0;
+    }
+}
+
 footer .logo {
     padding-top: 20px;
 }
@@ -263,6 +390,13 @@ footer .logo {
 footer .main-nav li, footer	.right-nav	li	{
     list-style-type:	none;
     display:	inline-block;
+}
+
+/* Small Mobile Styles */
+@media only screen and (max-width: 768px) {
+    footer .main-nav li, footer .right-nav li {
+        display: block;
+    }
 }
 
 footer .main-nav li	a, footer .right-nav li	a {
@@ -274,3 +408,43 @@ footer .main-nav li	a, footer .right-nav li	a {
     letter-spacing:	4px;
     padding: 0px 15px;
 }
+
+/* Small Mobile Styles */
+@media only screen and (max-width: 768px) {
+    footer .main-nav li a, footer .right-nav li a {
+        padding: 0px;
+    }
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+/* Tablet styles */
+@media only screen and (max-width: 1024px) {
+    header .main-nav, header .right-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+}
+
+/* Large mobile styles */
+@media only screen and (max-width: 768px) {
+    header .main-nav, header .right-nav {
+        display: none;
+    }
+}
+
+/* Small mobile styles */
+@media only screen and (max-width: 400px) {
+    header .main-nav, header .right-nav {
+        display: none;
+    }
+}
+
