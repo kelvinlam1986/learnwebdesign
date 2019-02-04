@@ -13,4 +13,13 @@ $(document).ready(function () {
     $('main').click(function () {
         $('main').removeClass('active');
     });
+
+    $('#blog').waypoint(function (direction) {
+        if (direction == 'down') {
+            $('header').addClass('sticky');
+        } else {
+            $('header').removeClass('sticky');
+        }
+    })
 })
+

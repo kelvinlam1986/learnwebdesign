@@ -168,6 +168,7 @@ header .right-nav {
     padding: 12px 22px;
     border:	none;
     outline: none;
+    transition: all 0.3s ease;
 }
 
 /* END HERO */
@@ -448,3 +449,35 @@ footer .main-nav li	a, footer .right-nav li	a {
     }
 }
 
+/* Common */
+.nav li a {
+
+}
+
+.nav li a:hover {
+    text-decoration: underline;
+}
+
+.btn-primary:hover {
+    background: #A3171B;
+}
+
+.btn-primary:active {
+    box-shadow: inset 0px 8px 4px rgba(0, 0, 0, 0.25);
+}
+/* END Common */ 
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    background-color: #212121;
+    background-image: none;
+    animation-name: sticky-animation;
+    animation-duration: 0.3s;
+}
+
+/* animation code */
+@keyframes sticky-animation {
+    from { transform: translateY(-90px); }
+    to { transform: translateY(0px) }
+}
